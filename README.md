@@ -83,7 +83,7 @@ func solution(participant: [String], completion: [String]) -> [String] {
     
     * 중복인 헤드기어만 따져 보자
     
-        * (headgear의 yellow_hat을 입을 경우 + headgear의 green_turban을 입을 경우 + 둘다 안입을 경우) * ..... -1(아무 것도 안입은 경우)
+        * (headgear의 yellow_hat을 입을 경우 + headgear의 green_turban을 입을 경우 + 둘다 안입을 경우) * ..... -1(아무 것도 안입은 경우는 없어야 하기 때문에 -1)
 
     ```swift
     let clothes: [[String]] = [["yellow_hat", "headgear"], ["blue_sunglasses", "eyewear"], ["green_turban", "headgear"]]
