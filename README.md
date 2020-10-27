@@ -73,3 +73,32 @@ func solution(participant: [String], completion: [String]) -> [String] {
             }
         }
         ```
+## 3. 완주하지 못한 선수 https://programmers.co.kr/learn/courses/30/lessons/42577
+
+* 해쉬 + 경우의 수
+
+    ```swift
+    let clothes: [[String]] = [["yellow_hat", "headgear"], ["blue_sunglasses", "eyewear"], ["green_turban", "headgear"]]
+    //let clothes = [["crow_mask", "face"], ["blue_sunglasses", "face"], ["smoky_makeup", "face"]]
+    print(solution(clothes))
+
+    func solution(_ clothes:[[String]]) -> Int {
+
+        var tempDict: [String: Int] = [:]
+
+        for cloth in clothes {
+            if let count = tempDict[cloth[1]] {
+                tempDict[cloth[1]] = count + 1
+            } else{
+                tempDict[cloth[1]] = 1
+            }
+        }
+
+        var count = 1
+        for temp in tempDict {
+            count *= (temp.value + 1)
+        }
+        count -= 1
+        return count
+    }
+    ```
