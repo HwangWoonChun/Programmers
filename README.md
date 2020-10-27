@@ -32,7 +32,7 @@ func solution(participant: [String], completion: [String]) -> [String] {
 }
 ```
 
-## 2. 완주하지 못한 선수 https://programmers.co.kr/learn/courses/30/lessons/42577
+## 2. 전 https://programmers.co.kr/learn/courses/30/lessons/42577
 
 * 해쉬 이용하라고 되어 있으나, 이게 더 쉬워보여 적용
 
@@ -73,9 +73,17 @@ func solution(participant: [String], completion: [String]) -> [String] {
             }
         }
         ```
-## 3. 완주하지 못한 선수 https://programmers.co.kr/learn/courses/30/lessons/42577
+## 3. 위장 https://programmers.co.kr/learn/courses/30/lessons/42578
 
 * 해쉬 + 경우의 수
+
+    * 동시에 일어나는 경우는 곱의 법칙을 사용
+    
+    * [[yellow_hat, headgear], [blue_sunglasses, eyewear], [green_turban, headgear]]
+    
+    * 중복인 헤드기어만 따져 보자
+    
+        * (headgear의 yellow_hat을 입을 경우 + headgear의 green_turban을 입을 경우 + 둘다 안입을 경우) * ..... -1(아무 것도 안입은 경우)
 
     ```swift
     let clothes: [[String]] = [["yellow_hat", "headgear"], ["blue_sunglasses", "eyewear"], ["green_turban", "headgear"]]
